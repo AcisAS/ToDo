@@ -9,7 +9,7 @@
           <div class="form-group">
             <input type="date" name="fecha"  [(ngModel)]="actividad.fecha" class="form-control">
           </div>
-          <button class="btn btn-success btn-block" (click)="saveActividad()">Guardar</button>
+          <button class="btn btn-success btn-block" (click)="edit? updateActividad() :saveActividad()">Guardar</button>
         </form>
       </div>
     </div>

@@ -13,6 +13,10 @@ export class ActividadListComponent implements OnInit {
   actividades: any = [];
 
   ngOnInit(): void {
+    this.getActividades();
+  }
+
+  getActividades() {
     this.actividadesService.getActividades().subscribe((res) => {
       this.actividades = res;
     });
@@ -22,6 +26,7 @@ export class ActividadListComponent implements OnInit {
     this.actividadesService.deleteActividad(id).subscribe(
       (res) => {
         console.log(res);
+        this.getActividades();
       },
       (error) => console.log(error)
     );

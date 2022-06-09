@@ -1,13 +1,17 @@
 <div class="col-md-4" *ngFor="let act of actividades">
   <div class="card text-center">
     <div class="card-header bg-dark text-white d-flex justify-content-between">
-      {{ act.actividad }}
+      <p>Descripción: {{ act.actividad }}</p>
       <button class="btn btn-danger" (click)="deleteActividad(act.idactividad)">
         <i class="fa fa-trash"></i>
       </button>
     </div>
     <div class="card-body">
-      {{ act.fecha }}
+      <p>{{ act.fecha }}</p>
+
+      <button [routerLink]="['/actividades/edit/',act.idactividad]" class="btn btn-info btn-block" >
+        Editar Actividad
+      </button>
     </div>
   </div>
 </div>

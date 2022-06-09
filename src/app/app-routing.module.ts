@@ -17,6 +17,10 @@ const routes: Routes = [
     path: 'actividades/add',
     component: ActividadFormComponent,
   },
+  {
+    path: 'actividades/edit/:id',
+    component: ActividadFormComponent,
+  },
 ];
 
 @NgModule({

@@ -1,6 +1,6 @@
 export interface Actividad {
   idactividad?:number;
-  actividad: String;
-  fecha: Date;
-  idusuario: number;
+  actividad?: string;
+  fecha?: Date;
+  idusuario?: number;
 }
