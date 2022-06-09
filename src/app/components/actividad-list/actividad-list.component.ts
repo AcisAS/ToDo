@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { Actividad } from 'src/app/models/actividad';
 import { ActividadesService } from '../../services/actividades.service';
 
@@ -9,12 +9,21 @@ import { ActividadesService } from '../../services/actividades.service';
 })
 export class ActividadListComponent implements OnInit {
   constructor(private actividadesService: ActividadesService) {}
-
+  @HostBinding('class') classes = 'row';
   actividades: any = [];
 
   ngOnInit(): void {
     this.actividadesService.getActividades().subscribe((res) => {
       this.actividades = res;
     });
+  }
+
+  deleteActividad(id: number) {
+    this.actividadesService.deleteActividad(id).subscribe(
+      (res) => {
+        console.log(res);
+      },
+      (error) => console.log(error)
+    );
   }
 }

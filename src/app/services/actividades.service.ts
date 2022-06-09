@@ -18,4 +18,8 @@ export class ActividadesService {
     return this.http.post(`${this.API_URI}/crear-actividad`,actividad);
 
   }
+  deleteActividad(id:number) {
+    return this.http.delete(`${this.API_URI}/eliminar-actividad/${id}`);
+
+  }
 }
