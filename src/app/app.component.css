@@ -1,0 +1,25 @@
+.basic-container button {
+  padding: 30px;
+  border: none;
+  background-color: rgba(65, 48, 160, 0.904);
+}
+
+.basic-container {
+  background-color: rgba(65, 48, 160, 0.904);
+}
+
+.actividad input{
+margin-top: 20px;
+}
+.actividad button{
+  border:none;
+  border-radius: 20px;
+  padding: 10px;
+  color: white;
+  background-color: rgba(38, 14, 175, 0.904);
+  }
+
+.actividad mat-label{
+color: black;
+font-size: 30px;
+}

@@ -1,10 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [];
+import { ActividadListComponent } from './components/actividad-list/actividad-list.component';
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: '/actividades',
+    pathMatch:'full'
+  },
+  {
+    path: 'actividades',
+    component: ActividadListComponent,
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
